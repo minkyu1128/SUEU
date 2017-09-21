@@ -5,7 +5,7 @@
 		<context:exclude-filter expression="org.springframework.stereotype.Service" type="annotation"/>
 		<context:exclude-filter expression="org.springframework.stereotype.Repository" type="annotation"/>
 	</context:component-scan>
-	<!-- ㅋㅋㅋ -->
+
 	<!-- For Pagination Tag -->
 	<bean class="egovframework.com.cmm.ImagePaginationRenderer" id="imageRenderer"/>
 
