@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3.0.dtd">
+<tiles-definitions>
+	<definition name="default.definition" template="/WEB-INF/jsp/egovframework/iscm/layouts/tiles-default-layout.jsp">
+		<put-attribute name="header"    value="/WEB-INF/jsp/egovframework/iscm/layouts/header.jsp" />
+		<put-attribute name="left"    value="" />
+		<put-attribute name="content"   value="" />
+		<put-attribute name="footer"    value="/WEB-INF/jsp/egovframework/iscm/layouts/footer.jsp" />
+	</definition>
+	<definition name="*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}.jsp" />
+	</definition>
+	<definition name="*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}.jsp" />
+	</definition>
+	<definition name="*/*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+	</definition>
+	<definition name="*/*/*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+	<definition name="*/*/*/*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}/{3}/{4}/{5}.jsp" />
+	</definition>
+	<definition name="*/*/*/*/*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}/{3}/{4}/{5}/{6}.jsp" />
+	</definition>
+	<definition name="*/*/*/*/*/*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}/{3}/{4}/{5}/{6}/{7}.jsp" />
+	</definition>
+	<definition name="*/*/*/*/*/*/*/*.def" extends="default.definition">
+		<put-attribute name="content"   value="/WEB-INF/jsp/{1}/{2}/{3}/{4}/{5}/{6}/{7}/{8}.jsp" />
+	</definition>
+</tiles-definitions>

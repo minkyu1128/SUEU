@@ -4,23 +4,35 @@
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d %5p [%c] %m%n" />
         </Console>
+        
+        <RollingFile name="dailyRollingFileAppender" fileName="../iscm_logs/iscm.log" filePattern="../iscm_logs/iscm_%d{yyyy-MM-dd}.log" append="true">
+		    <PatternLayout pattern="%d %5p [%c] %m%n" />
+		    <Policies>
+		    <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		    </Policies>
+		</RollingFile>
     </Appenders>
     <Loggers>
         <Logger name="java.sql" level="INFO" additivity="false">
             <AppenderRef ref="console" />
+            <AppenderRef ref="dailyRollingFileAppender" />
         </Logger>
         <Logger name="egovframework" level="DEBUG" additivity="false">
             <AppenderRef ref="console" />
+            <AppenderRef ref="dailyRollingFileAppender" />
         </Logger>
 		  <!-- log SQL with timing information, post execution -->
 	    <Logger name="jdbc.sqltiming" level="INFO" additivity="false">
 	        <AppenderRef ref="console" />
+            <AppenderRef ref="dailyRollingFileAppender" />
 	    </Logger>
-	    <Logger name="org.springframework" level="INFO" additivity="false">
+	    <Logger name="org.springframework" level="DEBUG" additivity="false">
 	        <AppenderRef ref="console" />
+            <AppenderRef ref="dailyRollingFileAppender" />
 	    </Logger>
         <Root level="ERROR">
             <AppenderRef ref="console" />
+            <AppenderRef ref="dailyRollingFileAppender" />
         </Root>
     </Loggers>
 </Configuration>
