@@ -44,7 +44,7 @@
 		concurrentMaxSessons="1"
 		concurrentExpiredUrl="/EgovContent.do"
 
-		defaultTargetUrl="/test/index.do"
+		defaultTargetUrl="/main/index.do"
 	/>
 
 	<egov-security:secured-object-config id="securedObjectConfig"
