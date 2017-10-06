@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
@@ -144,7 +145,7 @@
                       <li class="list-inline-item">
                         <a href="#">Like</a>
                       </li>
-                      <li class="list-inline-item">Â·</li>
+                      <li class="list-inline-item">·</li>
                       <li class="list-inline-item">
                         <a href="#">Reply</a>
                       </li>
@@ -159,7 +160,7 @@
                           <li class="list-inline-item">
                             <a href="#">Like</a>
                           </li>
-                          <li class="list-inline-item">Â·</li>
+                          <li class="list-inline-item">·</li>
                           <li class="list-inline-item">
                             <a href="#">Reply</a>
                           </li>
@@ -201,7 +202,7 @@
                       <li class="list-inline-item">
                         <a href="#">Like</a>
                       </li>
-                      <li class="list-inline-item">Â·</li>
+                      <li class="list-inline-item">·</li>
                       <li class="list-inline-item">
                         <a href="#">Reply</a>
                       </li>
@@ -270,7 +271,7 @@
                       <li class="list-inline-item">
                         <a href="#">Like</a>
                       </li>
-                      <li class="list-inline-item">Â·</li>
+                      <li class="list-inline-item">·</li>
                       <li class="list-inline-item">
                         <a href="#">Reply</a>
                       </li>
@@ -286,7 +287,7 @@
                           <li class="list-inline-item">
                             <a href="#">Like</a>
                           </li>
-                          <li class="list-inline-item">Â·</li>
+                          <li class="list-inline-item">·</li>
                           <li class="list-inline-item">
                             <a href="#">Reply</a>
                           </li>
@@ -854,9 +855,3 @@
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    
-<script type="text/javascript">
-	$('input[type="text"]').val('index.jsp에 작성됨');
-</script>    

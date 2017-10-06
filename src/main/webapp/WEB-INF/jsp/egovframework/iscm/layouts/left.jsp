@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/jsp/egovframework/iscm/cmmn/includeCmmnLib.jsp" %>
+<%@ include file="/WEB-INF/jsp/egovframework/iscm/cmmn/includeCmmnHead.jsp" %>
 
 	<div class="info_lst_bx">
 		<h2 class="tit">미반환차량 현황</h2>

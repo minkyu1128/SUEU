@@ -1,6 +1,6 @@
-package egovframework.common.utils;
+package egovframework.common.utils.tiles;
 
-public class TilesUseAt {
+public class TilesUtil {
 	/**
 	 * tiles를 가변적으로 사용하기 위한 정적 메서드
 	 * <br/>타일즈 사용 여부를 선택 할 수 있다.

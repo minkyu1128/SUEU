@@ -293,12 +293,12 @@
         <init-param>
             <description>로그인 실패시 반활 될 URL설정</description>
             <param-name>loginURL</param-name>
-            <param-value>/uat/uia/egovLoginUsr.do</param-value>
+            <param-value>/login/loginForm.do</param-value>
         </init-param>
         <init-param>
             <description>로그인 처리 URL설정</description>
             <param-name>loginProcessURL</param-name>
-            <param-value>/uat/uia/actionLogin</param-value>
+            <param-value>/login/login</param-value>
         </init-param>
     </filter>
 	<filter-mapping>

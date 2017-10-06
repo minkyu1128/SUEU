@@ -21,17 +21,24 @@
  	<security:http pattern="/resource/**" security="none"/>
  	<security:http pattern="\A/WEB-INF/jsp/.*\Z" request-matcher="regex" security="none"/>
 
+<!-- 		loginUrl="/login/loginForm.do" -->
     <egov-security:config id="securityConfig"
-		loginUrl="/uat/uia/egovLoginUsr.do"
+    	loginUrl="/login/loginForm.do"
 		logoutSuccessUrl="/EgovContent.do"
-		loginFailureUrl="/uat/uia/egovLoginUsr.do?login_error=1"
+		loginFailureUrl="/login/loginForm.do"
 		accessDeniedUrl="/sec/ram/accessDenied.do"
 
 		dataSource="egov.dataSource"
-		jdbcUsersByUsernameQuery="SELECT USER_ID, ESNTL_ID AS PASSWORD, 1 ENABLED, USER_NM, USER_ZIP,
-                                                              USER_ADRES, USER_EMAIL, USER_SE, ORGNZT_ID, ESNTL_ID,
-                                                              (select a.ORGNZT_NM from COMTNORGNZTINFO a where a.ORGNZT_ID = m.ORGNZT_ID) ORGNZT_NM
-                                                       FROM COMVNUSERMASTER m WHERE CONCAT(USER_SE, USER_ID) = ?"
+		jdbcUsersByUsernameQuery="SELECT USER_ID
+										, ESNTL_ID AS PASSWORD, 1 ENABLED
+										, USER_NM, USER_ZIP
+										, USER_ADRES, USER_EMAIL
+										, USER_SE
+										, ORGNZT_ID
+										, ESNTL_ID
+										, (select a.ORGNZT_NM from COMTNORGNZTINFO a where a.ORGNZT_ID = m.ORGNZT_ID) ORGNZT_NM 
+								FROM COMVNUSERMASTER m 
+								WHERE CONCAT(USER_SE, USER_ID) = ?"
 		jdbcAuthoritiesByUsernameQuery="SELECT A.SCRTY_DTRMN_TRGET_ID USER_ID, A.AUTHOR_CODE AUTHORITY
                                                              FROM COMTNEMPLYRSCRTYESTBS A, COMVNUSERMASTER B
                                                              WHERE A.SCRTY_DTRMN_TRGET_ID = B.ESNTL_ID AND B.USER_ID = ?"
